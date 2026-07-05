@@ -4,6 +4,9 @@ const articleSchema = new mongoose.Schema(
   {
     title: { type: String, required: true, trim: true },
     slug: { type: String, required: true, unique: true, lowercase: true, trim: true },
+    // slugs this article used to live under (filled on rename); public reads
+    // fall back to them so legacy URLs redirect instead of 404ing
+    previousSlugs: { type: [String], default: [], index: true },
     excerpt: { type: String, default: '' },
     content: { type: String, default: '' }, // HTML from the editor
     coverImage: { type: String, default: '' }, // URL

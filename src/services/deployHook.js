@@ -4,7 +4,14 @@ export async function triggerDeploy() {
   const url = process.env.CLOUDFLARE_DEPLOY_HOOK_URL
   if (!url) return
   try {
-    await fetch(url, { method: 'POST' })
+    const res = await fetch(url, { method: 'POST' })
+    // fetch resolves on 4xx/5xx (rate limit, expired token…) - without this
+    // check a refused rebuild would pass for a success and the site would
+    // silently keep serving the previous build
+    if (!res.ok) {
+      const body = await res.text().catch(() => '')
+      console.error(`Deploy hook failed: HTTP ${res.status} ${body.slice(0, 300)}`)
+    }
   } catch (err) {
     console.error('Deploy hook failed:', err.message)
   }

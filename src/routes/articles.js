@@ -6,12 +6,17 @@ import { triggerDeploy } from '../services/deployHook.js'
 
 const router = Router()
 
-async function uniqueSlug(title, base) {
+async function uniqueSlug(title, base, { ignoreId } = {}) {
   const root = base ? slugify(base) : slugify(title)
   let candidate = root || 'article'
   let n = 1
-  // bump suffix until the slug is free
-  while (await Article.exists({ slug: candidate })) {
+  // bump suffix until the slug is free - a slug is taken when another article
+  // uses it now (slug) or used to (previousSlugs: it redirects to that article)
+  const taken = async (s) => {
+    const clash = { $or: [{ slug: s }, { previousSlugs: s }] }
+    return Article.exists(ignoreId ? { $and: [clash, { _id: { $ne: ignoreId } }] } : clash)
+  }
+  while (await taken(candidate)) {
     n += 1
     candidate = `${root}-${n}`
   }
@@ -29,7 +34,11 @@ router.get('/articles', async (req, res, next) => {
 
 router.get('/articles/:slug', async (req, res, next) => {
   try {
-    const article = await Article.findOne({ slug: req.params.slug, status: 'published' })
+    // current slug first; then legacy slugs, so a renamed article keeps
+    // answering on its old URL (the front redirects to article.slug)
+    const article =
+      (await Article.findOne({ slug: req.params.slug, status: 'published' })) ||
+      (await Article.findOne({ previousSlugs: req.params.slug, status: 'published' }))
     if (!article) return res.status(404).json({ error: 'Not found' })
     res.json(article)
   } catch (err) { next(err) }
@@ -78,7 +87,12 @@ router.put('/admin/articles/:id', requireAuth, async (req, res, next) => {
 
     // re-slug only if an explicit slug was provided
     if (body.slug && slugify(body.slug) !== article.slug) {
-      article.slug = await uniqueSlug(article.title, body.slug)
+      const oldSlug = article.slug
+      article.slug = await uniqueSlug(article.title, body.slug, { ignoreId: article._id })
+      // remember the old slug (legacy URL keeps resolving); a slug can never
+      // be both current and previous
+      article.previousSlugs = [...new Set([...(article.previousSlugs || []), oldSlug])]
+        .filter((s) => s !== article.slug)
     }
     // stamp publishedAt the first time it goes live
     if (article.status === 'published' && !article.publishedAt) article.publishedAt = new Date()
