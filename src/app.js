@@ -8,6 +8,12 @@ import { notFound, errorHandler } from './middleware/error.js'
 export function buildApp() {
   const app = express()
 
+  // Heroku terminates TLS on its router and forwards the client IP in
+  // X-Forwarded-For. Trusting exactly 1 proxy hop makes req.ip the real
+  // client - required for the login rate limiter to count per visitor
+  // instead of lumping everyone behind the router's IP.
+  app.set('trust proxy', 1)
+
   const origins = (process.env.CORS_ORIGINS || '').split(',').map((s) => s.trim()).filter(Boolean)
   app.use(cors({ origin: origins.length ? origins : true }))
   app.use(express.json({ limit: '15mb' }))
