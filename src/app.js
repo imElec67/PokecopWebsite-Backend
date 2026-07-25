@@ -2,7 +2,6 @@ import express from 'express'
 import cors from 'cors'
 import authRoutes from './routes/auth.js'
 import articleRoutes from './routes/articles.js'
-import uploadRoutes from './routes/upload.js'
 import { notFound, errorHandler } from './middleware/error.js'
 
 export function buildApp() {
@@ -21,7 +20,6 @@ export function buildApp() {
   app.get('/api/health', (req, res) => res.json({ ok: true }))
   app.use('/api/auth', authRoutes)
   app.use('/api', articleRoutes)
-  app.use('/api', uploadRoutes)
 
   app.use(notFound)
   app.use(errorHandler)
