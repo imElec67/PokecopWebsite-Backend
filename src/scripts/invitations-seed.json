@@ -1,0 +1,254 @@
+{
+  "games": [
+    {
+      "game": "Pokemon",
+      "series": [
+        {
+          "slug": "me05",
+          "block": "Méga-Évolution",
+          "setCode": "ME05",
+          "name": "Nuit Noire",
+          "logo": "https://mcdn.pokemon.com/image/upload/c_limit,w_1023/f_auto/q_auto:best/v1/live/static-assets/content-assets/cms2-fr-fr/img/trading-card-game/series/me_series/me05/me05_logo_169_fr.png",
+          "releaseDate": "2026-07-17",
+          "summary": "L'extension de l'été 2026, à l'effigie de Méga-Darkrai-ex tout droit sorti de Légendes Pokémon Z-A. Sortie en plein cœur de l'été, juste avant la série 30e Anniversaire : les blisters et tripacks devraient être trouvables, mais l'ETB reste la cible n°1 des collectionneurs. Objectif : le sécuriser sous les 60 €.",
+          "tip": "Les stocks partent en minutes sur les grosses séries. Même en rupture, garde nos liens sous la main — les réassorts tombent sans prévenir, et nos alertes Discord & X bipent en direct. We bip, you cop.",
+          "items": [
+            {
+              "name": "Coffret Dresseur d'Élite (ETB)",
+              "image": "https://www.ultrajeux.com/images/produits/maxi/32812.jpg",
+              "description": "9 boosters ME05, carte promo Zarude AR, 65 sleeves Méga-Darkrai, énergies, dés et coffret rigide. Le format le plus chassé de la série : commande dès dispo sous 60 €.",
+              "price": 55.99,
+              "priceMax": 59.99,
+              "ean": "0196214142145",
+              "suppliers": [
+                { "name": "Amazon", "availability": "in_stock", "url": "https://www.amazon.fr/s?k=coffret+dresseur+elite+nuit+noire" },
+                { "name": "Fnac", "availability": "upcoming", "url": "" },
+                { "name": "Cultura", "availability": "out_of_stock", "url": "" },
+                { "name": "Micromania", "availability": "in_stock", "url": "" },
+                { "name": "E.Leclerc", "availability": "upcoming", "url": "" },
+                { "name": "Carrefour", "availability": "in_stock", "url": "" },
+                { "name": "King Jouet", "availability": "upcoming", "url": "" },
+                { "name": "JouéClub", "availability": "upcoming", "url": "" }
+              ]
+            },
+            {
+              "name": "Display 36 boosters",
+              "image": null,
+              "description": "Le format scellé de référence pour l'investissement long terme. Rarement sous PVC en grande enseigne : privilégie les alertes Pokecop dès l'ouverture des précos.",
+              "price": 179.99,
+              "ean": "0196214142152",
+              "suppliers": [
+                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
+                { "name": "Fnac", "availability": "out_of_stock", "url": "" },
+                { "name": "Cultura", "availability": "upcoming", "url": "" },
+                { "name": "Micromania", "availability": "upcoming", "url": "" }
+              ]
+            },
+            {
+              "name": "Bundle 6 boosters",
+              "image": null,
+              "description": "Le meilleur ratio booster/prix de la série. Idéal pour ouvrir sans casser un display, souvent limité à 2-3 par client.",
+              "price": 29.99,
+              "ean": "0196214142169",
+              "suppliers": [
+                { "name": "Amazon", "availability": "upcoming", "url": "" },
+                { "name": "Cultura", "availability": "upcoming", "url": "" }
+              ]
+            },
+            {
+              "name": "Tripack Évoli",
+              "image": null,
+              "description": "3 boosters ME05 et une carte promo Évoli holo. Le format d'appoint le plus simple à trouver en grande surface.",
+              "price": 17.99,
+              "ean": "0196214142176",
+              "suppliers": [
+                { "name": "Carrefour", "availability": "upcoming", "url": "" },
+                { "name": "E.Leclerc", "availability": "upcoming", "url": "" }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "30-anniversaire",
+          "block": "Édition Anniversaire",
+          "setCode": "30TH",
+          "name": "30e Anniversaire",
+          "logo": null,
+          "releaseDate": "2026-09-16",
+          "summary": "La gamme 30th Celebration fête les 30 ans de Pokémon : ETB blanc et doré avec promo Nidorina, Ultra Premium Collection Noctali & Mentali, mini tins et Pokébox. La sortie la plus attendue de 2026 — tout partira en précommande.",
+          "tip": "Les précommandes anniversaire s'ouvrent par vagues surprises. Active les alertes dès maintenant : sur la 25th, tout était parti avant la sortie officielle.",
+          "items": [
+            {
+              "name": "Coffret Dresseur d'Élite 30 ans",
+              "image": null,
+              "description": "9 boosters 30th Celebration, promo Nidorina style Illustration Rare et design blanc et doré. Version Pokémon Center avec promo supplémentaire attendue.",
+              "price": 55.99,
+              "priceMax": 59.99,
+              "ean": "0196214150001",
+              "suppliers": [
+                { "name": "Amazon", "availability": "upcoming", "url": "" },
+                { "name": "Fnac", "availability": "upcoming", "url": "" },
+                { "name": "Cultura", "availability": "upcoming", "url": "" }
+              ]
+            },
+            {
+              "name": "Ultra Premium Collection Noctali & Mentali",
+              "image": null,
+              "description": "Le produit premium de la gamme anniversaire : promos Noctali et Mentali, boosters 30th Celebration et accessoires collector.",
+              "price": 129.99,
+              "ean": "0196214150002",
+              "suppliers": [
+                { "name": "Amazon", "availability": "upcoming", "url": "" },
+                { "name": "Micromania", "availability": "upcoming", "url": "" }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "me04",
+          "block": "Méga-Évolution",
+          "setCode": "ME04",
+          "name": "Rugissement Céleste",
+          "logo": null,
+          "releaseDate": "2026-04-10",
+          "summary": "L'extension du printemps 2026 portée par Méga-Rayquaza. Les invitations Amazon sont fermées mais des réassorts ponctuels tombent encore en grande enseigne.",
+          "items": [
+            {
+              "name": "Coffret Dresseur d'Élite (ETB)",
+              "image": null,
+              "description": "9 boosters ME04, carte promo exclusive et accessoires. Encore trouvable en réassort ponctuel.",
+              "price": 55.99,
+              "ean": "0196214140004",
+              "suppliers": [
+                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
+                { "name": "Cultura", "availability": "in_stock", "url": "" },
+                { "name": "King Jouet", "availability": "out_of_stock", "url": "" }
+              ]
+            },
+            {
+              "name": "Display 36 boosters",
+              "image": null,
+              "description": "Épuisé partout sous PVC depuis la sortie. Surveille les alertes réassort.",
+              "price": 179.99,
+              "ean": "0196214140011",
+              "suppliers": [
+                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
+                { "name": "Fnac", "availability": "out_of_stock", "url": "" }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "me03",
+          "block": "Méga-Évolution",
+          "setCode": "ME03",
+          "name": "Aube Prismatique",
+          "logo": null,
+          "releaseDate": "2026-01-16",
+          "items": [
+            {
+              "name": "Coffret Dresseur d'Élite (ETB)",
+              "image": null,
+              "description": "9 boosters ME03 et promo exclusive. Série épuisée en neuf, liens conservés pour les réassorts.",
+              "price": 55.99,
+              "ean": "0196214140003",
+              "suppliers": [
+                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
+                { "name": "Fnac", "availability": "out_of_stock", "url": "" }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "me02",
+          "block": "Méga-Évolution",
+          "setCode": "ME02",
+          "name": "Flammes Phantasmagoriques",
+          "logo": null,
+          "releaseDate": "2025-11-14",
+          "items": [
+            {
+              "name": "Coffret Dresseur d'Élite (ETB)",
+              "image": null,
+              "description": "9 boosters ME02 et promo exclusive. Série épuisée en neuf, liens conservés pour les réassorts.",
+              "price": 55.99,
+              "ean": "0196214140002",
+              "suppliers": [
+                { "name": "Amazon", "availability": "out_of_stock", "url": "" }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "me01",
+          "block": "Méga-Évolution",
+          "setCode": "ME01",
+          "name": "Méga-Évolution",
+          "logo": null,
+          "releaseDate": "2025-08-01",
+          "items": [
+            {
+              "name": "Coffret Dresseur d'Élite (ETB)",
+              "image": null,
+              "description": "9 boosters ME01 et promo exclusive. Série épuisée en neuf, liens conservés pour les réassorts.",
+              "price": 55.99,
+              "ean": "0196214140001",
+              "suppliers": [
+                { "name": "Amazon", "availability": "out_of_stock", "url": "" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": "One Piece",
+      "series": [
+        {
+          "slug": "op13",
+          "block": "One Piece Card Game",
+          "setCode": "OP13",
+          "name": "The World's Strongest Warriors",
+          "logo": null,
+          "releaseDate": "2026-06-26",
+          "summary": "L'extension One Piece de l'été, portée par les guerriers légendaires. La demande explose sur le TCG One Piece : les displays partent aussi vite que les grosses séries Pokémon.",
+          "items": [
+            {
+              "name": "Display 24 boosters OP13",
+              "image": null,
+              "description": "Le format de référence du TCG One Piece. Sous PVC uniquement lors des vagues officielles Bandai.",
+              "price": 89.99,
+              "ean": "0811039040013",
+              "suppliers": [
+                { "name": "Amazon", "availability": "in_stock", "url": "https://www.amazon.fr/s?k=display+one+piece+op13" },
+                { "name": "Fnac", "availability": "out_of_stock", "url": "" },
+                { "name": "Cultura", "availability": "upcoming", "url": "" }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "prb02",
+          "block": "One Piece Card Game",
+          "setCode": "PRB02",
+          "name": "Premium Booster Anniversary",
+          "logo": null,
+          "releaseDate": "2026-10-09",
+          "items": [
+            {
+              "name": "Display 20 boosters PRB02",
+              "image": null,
+              "description": "Le premium booster anniversaire : reprints très recherchés et alt arts exclusifs.",
+              "price": 99.99,
+              "ean": "0811039040020",
+              "suppliers": [
+                { "name": "Amazon", "availability": "upcoming", "url": "" },
+                { "name": "Micromania", "availability": "upcoming", "url": "" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
