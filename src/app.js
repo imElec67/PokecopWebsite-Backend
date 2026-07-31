@@ -15,7 +15,23 @@ export function buildApp() {
   app.set('trust proxy', 1)
 
   const origins = (process.env.CORS_ORIGINS || '').split(',').map((s) => s.trim()).filter(Boolean)
-  app.use(cors({ origin: origins.length ? origins : true }))
+  const allowed = new Set(origins)
+  app.use(
+    cors({
+      origin(origin, cb) {
+        // pas d'origine (curl, SSR, same-origin) ou aucune CORS_ORIGINS
+        // configurée (dev) → tout autorisé
+        if (!origin || !origins.length) return cb(null, true)
+        if (allowed.has(origin)) return cb(null, true)
+        // URLs de preview Cloudflare (builds de branche) : l'auth JWT reste
+        // requise, le CORS large ne fait qu'autoriser le navigateur à appeler.
+        try {
+          if (new URL(origin).hostname.endsWith('.workers.dev')) return cb(null, true)
+        } catch {}
+        return cb(null, false)
+      },
+    })
+  )
   app.use(express.json({ limit: '15mb' }))
 
   app.get('/api/health', (req, res) => res.json({ ok: true }))
