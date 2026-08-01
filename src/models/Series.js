@@ -5,7 +5,7 @@ const supplierSchema = new mongoose.Schema(
     name: { type: String, required: true, trim: true },
     availability: {
       type: String,
-      enum: ['in_stock', 'out_of_stock', 'upcoming'],
+      enum: ['in_stock', 'out_of_stock', 'upcoming', 'invitation'],
       default: 'upcoming',
     },
     url: { type: String, default: '' },
