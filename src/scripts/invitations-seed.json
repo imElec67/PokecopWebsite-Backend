@@ -309,12 +309,12 @@
               "price": 55.99,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "in_stock", "url": "https://www.amazon.fr/s?k=coffret+dresseur+elite+nuit+noire" },
-                { "name": "Fnac", "availability": "out_of_stock", "url": "" },
-                { "name": "Cultura", "availability": "in_stock", "url": "" },
-                { "name": "Micromania", "availability": "in_stock", "url": "" },
-                { "name": "E.Leclerc", "availability": "out_of_stock", "url": "" },
-                { "name": "Carrefour", "availability": "in_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "https://www.amazon.fr/s?k=coffret+dresseur+elite+nuit+noire" },
+                { "name": "Fnac", "availability": "link", "url": "" },
+                { "name": "Cultura", "availability": "link", "url": "" },
+                { "name": "Micromania", "availability": "link", "url": "" },
+                { "name": "E.Leclerc", "availability": "link", "url": "" },
+                { "name": "Carrefour", "availability": "link", "url": "" }
               ]
             },
             {
@@ -325,8 +325,8 @@
               "ean": "",
               "suppliers": [
                 { "name": "Amazon", "availability": "invitation", "url": "https://www.amazon.fr/s?k=display+pokemon+nuit+noire" },
-                { "name": "Fnac", "availability": "out_of_stock", "url": "" },
-                { "name": "Cultura", "availability": "out_of_stock", "url": "" }
+                { "name": "Fnac", "availability": "link", "url": "" },
+                { "name": "Cultura", "availability": "link", "url": "" }
               ]
             },
             {
@@ -336,8 +336,8 @@
               "price": 107.82,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
-                { "name": "Micromania", "availability": "in_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Micromania", "availability": "link", "url": "" }
               ]
             },
             {
@@ -347,8 +347,8 @@
               "price": 35.99,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "in_stock", "url": "" },
-                { "name": "Cultura", "availability": "in_stock", "url": "" },
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Cultura", "availability": "link", "url": "" },
                 { "name": "Carrefour", "availability": "upcoming", "url": "" }
               ]
             },
@@ -359,9 +359,9 @@
               "price": 17.99,
               "ean": "",
               "suppliers": [
-                { "name": "Carrefour", "availability": "in_stock", "url": "" },
-                { "name": "E.Leclerc", "availability": "in_stock", "url": "" },
-                { "name": "King Jouet", "availability": "in_stock", "url": "" }
+                { "name": "Carrefour", "availability": "link", "url": "" },
+                { "name": "E.Leclerc", "availability": "link", "url": "" },
+                { "name": "King Jouet", "availability": "link", "url": "" }
               ]
             }
           ]
@@ -383,10 +383,10 @@
               "price": 55.99,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
-                { "name": "Cultura", "availability": "in_stock", "url": "" },
-                { "name": "Micromania", "availability": "out_of_stock", "url": "" },
-                { "name": "King Jouet", "availability": "in_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Cultura", "availability": "link", "url": "" },
+                { "name": "Micromania", "availability": "link", "url": "" },
+                { "name": "King Jouet", "availability": "link", "url": "" }
               ]
             },
             {
@@ -396,8 +396,8 @@
               "price": 215.64,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
-                { "name": "Fnac", "availability": "out_of_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Fnac", "availability": "link", "url": "" }
               ]
             },
             {
@@ -407,8 +407,8 @@
               "price": 35.99,
               "ean": "",
               "suppliers": [
-                { "name": "Cultura", "availability": "in_stock", "url": "" },
-                { "name": "Carrefour", "availability": "out_of_stock", "url": "" }
+                { "name": "Cultura", "availability": "link", "url": "" },
+                { "name": "Carrefour", "availability": "link", "url": "" }
               ]
             },
             {
@@ -418,8 +418,8 @@
               "price": 17.99,
               "ean": "",
               "suppliers": [
-                { "name": "E.Leclerc", "availability": "in_stock", "url": "" },
-                { "name": "Carrefour", "availability": "in_stock", "url": "" }
+                { "name": "E.Leclerc", "availability": "link", "url": "" },
+                { "name": "Carrefour", "availability": "link", "url": "" }
               ]
             }
           ]
@@ -441,9 +441,9 @@
               "price": 55.99,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
-                { "name": "Fnac", "availability": "out_of_stock", "url": "" },
-                { "name": "Cultura", "availability": "in_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Fnac", "availability": "link", "url": "" },
+                { "name": "Cultura", "availability": "link", "url": "" }
               ]
             },
             {
@@ -453,7 +453,7 @@
               "price": 215.64,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" }
               ]
             },
             {
@@ -463,8 +463,8 @@
               "price": 17.99,
               "ean": "",
               "suppliers": [
-                { "name": "E.Leclerc", "availability": "out_of_stock", "url": "" },
-                { "name": "Carrefour", "availability": "in_stock", "url": "" }
+                { "name": "E.Leclerc", "availability": "link", "url": "" },
+                { "name": "Carrefour", "availability": "link", "url": "" }
               ]
             }
           ]
@@ -486,9 +486,9 @@
               "price": 55.99,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
-                { "name": "Cultura", "availability": "in_stock", "url": "" },
-                { "name": "Micromania", "availability": "out_of_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Cultura", "availability": "link", "url": "" },
+                { "name": "Micromania", "availability": "link", "url": "" }
               ]
             },
             {
@@ -498,8 +498,8 @@
               "price": 39.99,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "in_stock", "url": "" },
-                { "name": "Fnac", "availability": "out_of_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Fnac", "availability": "link", "url": "" }
               ]
             },
             {
@@ -509,8 +509,8 @@
               "price": 24.99,
               "ean": "",
               "suppliers": [
-                { "name": "King Jouet", "availability": "in_stock", "url": "" },
-                { "name": "JouéClub", "availability": "out_of_stock", "url": "" }
+                { "name": "King Jouet", "availability": "link", "url": "" },
+                { "name": "JouéClub", "availability": "link", "url": "" }
               ]
             },
             {
@@ -520,8 +520,8 @@
               "price": 17.99,
               "ean": "",
               "suppliers": [
-                { "name": "Carrefour", "availability": "in_stock", "url": "" },
-                { "name": "E.Leclerc", "availability": "out_of_stock", "url": "" }
+                { "name": "Carrefour", "availability": "link", "url": "" },
+                { "name": "E.Leclerc", "availability": "link", "url": "" }
               ]
             },
             {
@@ -531,8 +531,8 @@
               "price": 35.99,
               "ean": "",
               "suppliers": [
-                { "name": "Cultura", "availability": "in_stock", "url": "" },
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" }
+                { "name": "Cultura", "availability": "link", "url": "" },
+                { "name": "Amazon", "availability": "link", "url": "" }
               ]
             }
           ]
@@ -554,8 +554,8 @@
               "price": 55.99,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
-                { "name": "Cultura", "availability": "out_of_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Cultura", "availability": "link", "url": "" }
               ]
             },
             {
@@ -565,7 +565,7 @@
               "price": 215.64,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" }
               ]
             }
           ]
@@ -587,8 +587,8 @@
               "price": 55.99,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" },
-                { "name": "Fnac", "availability": "out_of_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" },
+                { "name": "Fnac", "availability": "link", "url": "" }
               ]
             },
             {
@@ -598,7 +598,7 @@
               "price": 215.64,
               "ean": "",
               "suppliers": [
-                { "name": "Amazon", "availability": "out_of_stock", "url": "" }
+                { "name": "Amazon", "availability": "link", "url": "" }
               ]
             }
           ]
