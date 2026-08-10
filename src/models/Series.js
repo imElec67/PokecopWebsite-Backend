@@ -5,8 +5,9 @@ const supplierSchema = new mongoose.Schema(
     name: { type: String, required: true, trim: true },
     availability: {
       type: String,
-      enum: ['in_stock', 'out_of_stock', 'upcoming', 'invitation'],
-      default: 'upcoming',
+      // 3 états : link (lien dispo), upcoming (à venir), invitation (sur invitation)
+      enum: ['link', 'upcoming', 'invitation'],
+      default: 'link',
     },
     url: { type: String, default: '' },
   },
