@@ -3,6 +3,7 @@ import cors from 'cors'
 import authRoutes from './routes/auth.js'
 import articleRoutes from './routes/articles.js'
 import invitationRoutes from './routes/invitations.js'
+import authorRoutes from './routes/authors.js'
 import { notFound, errorHandler } from './middleware/error.js'
 
 export function buildApp() {
@@ -38,6 +39,7 @@ export function buildApp() {
   app.use('/api/auth', authRoutes)
   app.use('/api', articleRoutes)
   app.use('/api', invitationRoutes)
+  app.use('/api', authorRoutes)
 
   app.use(notFound)
   app.use(errorHandler)
