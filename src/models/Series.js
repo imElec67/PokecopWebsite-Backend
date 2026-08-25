@@ -40,6 +40,9 @@ const seriesSchema = new mongoose.Schema(
     releaseDate: { type: Date, default: null },
     summary: { type: String, default: '' },
     tip: { type: String, default: '' },
+    // lien affilié unique pour toute la série (ex. page Amazon de la série),
+    // affiché sur /liens/[slug] et /invitations, éditable dans le dashboard
+    globalLink: { type: String, default: '' },
     order: { type: Number, default: 0 },
     items: { type: [itemSchema], default: [] },
   },

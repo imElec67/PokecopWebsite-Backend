@@ -80,7 +80,7 @@ router.put('/admin/invitations/:id', requireAuth, async (req, res, next) => {
 
     const body = req.body || {}
     const fields = ['game', 'block', 'setCode', 'name', 'logo', 'releaseDate',
-      'summary', 'tip', 'order', 'items']
+      'summary', 'tip', 'globalLink', 'order', 'items']
     for (const f of fields) if (f in body) serie[f] = body[f]
 
     // re-slug uniquement si un slug explicite est fourni et différent
