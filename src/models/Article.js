@@ -10,6 +10,7 @@ const articleSchema = new mongoose.Schema(
     excerpt: { type: String, default: '' },
     content: { type: String, default: '' }, // HTML from the editor
     coverImage: { type: String, default: '' }, // URL
+    coverAlt: { type: String, default: '', trim: true }, // texte alternatif de la cover (SEO + a11y)
     author: { type: String, default: '' },
     tags: { type: [String], default: [] },
     featured: { type: Boolean, default: false, index: true }, // pinned to top of /blog

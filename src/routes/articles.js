@@ -6,6 +6,13 @@ import { triggerDeploy } from '../services/deployHook.js'
 
 const router = Router()
 
+// Champs dont la modification change réellement l'article pour le lecteur.
+// updatedAt (= "Mis à jour le" + dateModified du JSON-LD) n'avance que si l'un
+// d'eux change : re-sauvegarder sans rien toucher, épingler (featured) ou
+// changer le statut ne doit pas faire passer l'article pour mis à jour.
+const CONTENT_FIELDS = ['title', 'slug', 'excerpt', 'content', 'coverImage', 'coverAlt',
+  'author', 'tags', 'metaTitle', 'metaDescription']
+
 async function uniqueSlug(title, base, { ignoreId } = {}) {
   const root = base ? slugify(base) : slugify(title)
   let candidate = root || 'article'
@@ -81,7 +88,7 @@ router.put('/admin/articles/:id', requireAuth, async (req, res, next) => {
     if (!article) return res.status(404).json({ error: 'Not found' })
 
     const body = req.body || {}
-    const fields = ['title', 'excerpt', 'content', 'coverImage', 'author', 'tags',
+    const fields = ['title', 'excerpt', 'content', 'coverImage', 'coverAlt', 'author', 'tags',
       'featured', 'status', 'metaTitle', 'metaDescription']
     for (const f of fields) if (f in body) article[f] = body[f]
 
@@ -97,7 +104,8 @@ router.put('/admin/articles/:id', requireAuth, async (req, res, next) => {
     // stamp publishedAt the first time it goes live
     if (article.status === 'published' && !article.publishedAt) article.publishedAt = new Date()
 
-    await article.save()
+    const contentChanged = CONTENT_FIELDS.some((f) => article.isModified(f))
+    await article.save({ timestamps: contentChanged })
     await triggerDeploy()
     res.json(article)
   } catch (err) { next(err) }

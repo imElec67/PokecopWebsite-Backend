@@ -95,3 +95,36 @@ describe('slug renames', () => {
     expect(res.body.title).toBe('Article beta')
   })
 })
+
+describe('cover alt text', () => {
+  it('stores coverAlt on create and update', async () => {
+    const a = await createArticle({ title: 'Avec cover', coverImage: 'https://images.pokecop.com/x.png', coverAlt: ' Display et booster ' })
+    expect(a.coverAlt).toBe('Display et booster')
+    const upd = await auth(request(app).put(`/api/admin/articles/${a.id}`)).send({ coverAlt: 'Nouvel alt' })
+    expect(upd.body.coverAlt).toBe('Nouvel alt')
+    const pub = await request(app).get('/api/articles/avec-cover')
+    expect(pub.body.coverAlt).toBe('Nouvel alt')
+  })
+})
+
+describe('updatedAt', () => {
+  const later = () => new Promise((r) => setTimeout(r, 15))
+
+  it('does not move when nothing reader-facing changed', async () => {
+    const a = await createArticle({ title: 'Stable' })
+    await later()
+    // même contenu renvoyé tel quel + épinglage : pas une mise à jour
+    const upd = await auth(request(app).put(`/api/admin/articles/${a.id}`))
+      .send({ title: 'Stable', content: '<p>contenu</p>', featured: true })
+    expect(upd.status).toBe(200)
+    expect(upd.body.featured).toBe(true)
+    expect(upd.body.updatedAt).toBe(a.updatedAt)
+  })
+
+  it('moves when the content changes', async () => {
+    const a = await createArticle({ title: 'Evolutif' })
+    await later()
+    const upd = await auth(request(app).put(`/api/admin/articles/${a.id}`)).send({ content: '<p>nouveau</p>' })
+    expect(new Date(upd.body.updatedAt) > new Date(a.updatedAt)).toBe(true)
+  })
+})
