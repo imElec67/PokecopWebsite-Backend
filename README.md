@@ -24,10 +24,10 @@ See `.env.example`. Required in production: `JWT_SECRET`, `MONGODB_URI`,
 
 ## External services to provision
 
-1. **MongoDB Atlas** — create a free M0 cluster, a DB user, allow network access,
+1. **MongoDB Atlas** - create a free M0 cluster, a DB user, allow network access,
    copy the connection string into `MONGODB_URI`.
-2. **Cloudinary** — create a free account; copy cloud name + API key/secret.
-3. **Cloudflare Deploy Hook** — in the Cloudflare Pages/Workers project for the
+2. **Cloudinary** - create a free account; copy cloud name + API key/secret.
+3. **Cloudflare Deploy Hook** - in the Cloudflare Pages/Workers project for the
    site, create a deploy hook and copy its URL into `CLOUDFLARE_DEPLOY_HOOK_URL`.
    This is what makes "Publish" rebuild the static site.
 

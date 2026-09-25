@@ -28,9 +28,9 @@ if (APPLY && n > 0) {
     { $set: { 'items.$[].suppliers.$[s].availability': 'link' } },
     { arrayFilters: [{ 's.availability': { $in: OLD } }] }
   )
-  console.log(`✅ appliqué — ${res.modifiedCount} série(s) modifiée(s)`)
+  console.log(`✅ appliqué - ${res.modifiedCount} série(s) modifiée(s)`)
 } else if (!APPLY) {
-  console.log('(dry-run — relance avec --apply pour écrire)')
+  console.log('(dry-run - relance avec --apply pour écrire)')
 }
 
 await disconnectDB()

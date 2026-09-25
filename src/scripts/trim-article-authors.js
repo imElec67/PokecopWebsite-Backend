@@ -25,9 +25,9 @@ if (APPLY && dirty.length) {
     [{ $set: { author: { $trim: { input: '$author' } } } }],
     { updatePipeline: true }
   )
-  console.log(`✅ appliqué — ${res.modifiedCount} article(s) mis à jour`)
+  console.log(`✅ appliqué - ${res.modifiedCount} article(s) mis à jour`)
 } else if (!APPLY) {
-  console.log('(dry-run — relance avec --apply pour écrire)')
+  console.log('(dry-run - relance avec --apply pour écrire)')
 }
 
 await disconnectDB()
