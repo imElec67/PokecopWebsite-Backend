@@ -128,3 +128,12 @@ describe('updatedAt', () => {
     expect(new Date(upd.body.updatedAt) > new Date(a.updatedAt)).toBe(true)
   })
 })
+
+describe('series link', () => {
+  it('stores the series slug on create and update', async () => {
+    const a = await createArticle({ title: 'Article série', series: 'ME05' })
+    expect(a.series).toBe('me05')
+    const upd = await auth(request(app).put(`/api/admin/articles/${a.id}`)).send({ series: '' })
+    expect(upd.body.series).toBe('')
+  })
+})

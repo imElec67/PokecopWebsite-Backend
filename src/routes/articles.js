@@ -10,7 +10,7 @@ const router = Router()
 // updatedAt (= "Mis à jour le" + dateModified du JSON-LD) n'avance que si l'un
 // d'eux change : re-sauvegarder sans rien toucher, épingler (featured) ou
 // changer le statut ne doit pas faire passer l'article pour mis à jour.
-const CONTENT_FIELDS = ['title', 'slug', 'excerpt', 'content', 'coverImage', 'coverAlt',
+const CONTENT_FIELDS = ['title', 'slug', 'excerpt', 'content', 'coverImage', 'coverAlt', 'series',
   'author', 'tags', 'metaTitle', 'metaDescription']
 
 async function uniqueSlug(title, base, { ignoreId } = {}) {
@@ -88,7 +88,7 @@ router.put('/admin/articles/:id', requireAuth, async (req, res, next) => {
     if (!article) return res.status(404).json({ error: 'Not found' })
 
     const body = req.body || {}
-    const fields = ['title', 'excerpt', 'content', 'coverImage', 'coverAlt', 'author', 'tags',
+    const fields = ['title', 'excerpt', 'content', 'coverImage', 'coverAlt', 'series', 'author', 'tags',
       'featured', 'status', 'metaTitle', 'metaDescription']
     for (const f of fields) if (f in body) article[f] = body[f]
 

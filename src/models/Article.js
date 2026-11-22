@@ -11,6 +11,9 @@ const articleSchema = new mongoose.Schema(
     content: { type: String, default: '' }, // HTML from the editor
     coverImage: { type: String, default: '' }, // URL
     coverAlt: { type: String, default: '', trim: true }, // texte alternatif de la cover (SEO + a11y)
+    // slug de la série (/liens/<slug>) dont parle l'article : lien croisé
+    // article ↔ page série. Vide = article non rattaché à une série.
+    series: { type: String, default: '', lowercase: true, trim: true },
     author: { type: String, default: '' },
     tags: { type: [String], default: [] },
     featured: { type: Boolean, default: false, index: true }, // pinned to top of /blog
