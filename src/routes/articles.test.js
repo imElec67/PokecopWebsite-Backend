@@ -137,3 +137,12 @@ describe('series link', () => {
     expect(upd.body.series).toBe('')
   })
 })
+
+describe('reserved slugs', () => {
+  it('never gives an article a pillar slug', async () => {
+    const a = await createArticle({ title: 'Pokémon' })
+    expect(a.slug).toBe('pokemon-2')
+    const b = await createArticle({ title: 'Un article', slug: 'one-piece' })
+    expect(b.slug).toBe('one-piece-2')
+  })
+})

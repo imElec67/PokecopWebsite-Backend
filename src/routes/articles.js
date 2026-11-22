@@ -13,6 +13,10 @@ const router = Router()
 const CONTENT_FIELDS = ['title', 'slug', 'excerpt', 'content', 'coverImage', 'coverAlt', 'series',
   'author', 'tags', 'metaTitle', 'metaDescription']
 
+// Slugs réservés aux pages piliers du front (/blog/<jeu>, app/lib/games.js
+// côté site) : un article qui les porterait serait masqué par le pilier.
+const RESERVED_SLUGS = new Set(['jeu', 'pokemon', 'one-piece', 'lorcana'])
+
 async function uniqueSlug(title, base, { ignoreId } = {}) {
   const root = base ? slugify(base) : slugify(title)
   let candidate = root || 'article'
@@ -20,6 +24,7 @@ async function uniqueSlug(title, base, { ignoreId } = {}) {
   // bump suffix until the slug is free - a slug is taken when another article
   // uses it now (slug) or used to (previousSlugs: it redirects to that article)
   const taken = async (s) => {
+    if (RESERVED_SLUGS.has(s)) return true
     const clash = { $or: [{ slug: s }, { previousSlugs: s }] }
     return Article.exists(ignoreId ? { $and: [clash, { _id: { $ne: ignoreId } }] } : clash)
   }
